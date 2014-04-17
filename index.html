@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <!--HTML5 doctype-->
 <html>
+ <!--
+      Include xhr.js in your index.html when using web services that make cross origin requests
+      This file makes those requests successfully when testing your apps under the "EMULATE", "BUILD" & "TEST" tab with the 
+      Intel(R) App Preview mobile app.
+      DISCLAIMER: If you don't need to perform these requests, remove the following script (xhr.js)
+  -->
+ <!-- content goes here-->
 
  <head>
   <link rel="stylesheet" type="text/css" href="app_framework/css/af.ui.min.css">
@@ -17,8 +24,8 @@
    		input, textarea  { -webkit-user-select:text; }
   </style>
   <script src="intelxdk.js"></script>
-  <script src='cordova.js'></script> 
-  <script src='xhr.js'></script>
+  <script src="cordova.js"></script>
+  <script src="xhr.js"></script>
   <!--
       Include xhr.js in your index.html when using web services that make cross origin requests
       This file makes those requests successfully when testing your apps under the "EMULATE", "BUILD" & "TEST" tab with the 
@@ -39,15 +46,6 @@
  </head>
 
  <body id="afui">
-
-
-
-
-
-
-
-
-
 
   <!-- content goes here-->
   <div class="uwrap" id="content">
@@ -95,8 +93,7 @@
      <header class="container-group inner-element uib_w_14" data-uib="app_framework/header" data-ver="0" id="af-header-6">
       <h1>Item 6</h1>
       <div class="widget-container wrapping-col single-centered"></div>
-      <div class="widget-container content-area horiz-area wrapping-col left"><a class="button widget uib_w_16 d-margins icon left" data-uib="app_framework/button" data-ver="0" id="item6backbutton"
-       href="#mainpage">Back</a>
+      <div class="widget-container content-area horiz-area wrapping-col left with-back"><a class="button" id="backButton">Back</a>
       </div>
       <div class="widget-container content-area horiz-area wrapping-col right"></div>
      </header>
@@ -126,8 +123,7 @@
      <header class="container-group inner-element uib_w_13" data-uib="app_framework/header" data-ver="0" id="af-header-5">
       <h1>Item 5</h1>
       <div class="widget-container wrapping-col single-centered"></div>
-      <div class="widget-container content-area horiz-area wrapping-col left"><a class="button widget uib_w_17 d-margins icon left" data-uib="app_framework/button" data-ver="0" id="item5backbutton"
-       href="#mainpage">Back</a>
+      <div class="widget-container content-area horiz-area wrapping-col left with-back"><a class="button" id="backButton">Back</a>
       </div>
       <div class="widget-container content-area horiz-area wrapping-col right"></div>
      </header>
@@ -157,8 +153,7 @@
      <header class="container-group inner-element uib_w_12" data-uib="app_framework/header" data-ver="0" id="af-header-4">
       <h1>Item 4</h1>
       <div class="widget-container wrapping-col single-centered"></div>
-      <div class="widget-container content-area horiz-area wrapping-col left"><a class="button widget uib_w_19 d-margins icon left" data-uib="app_framework/button" data-ver="0" id="item4backbutton"
-       href="#mainpage">Back</a>
+      <div class="widget-container content-area horiz-area wrapping-col left with-back"><a class="button" id="backButton">Back</a>
       </div>
       <div class="widget-container content-area horiz-area wrapping-col right"></div>
      </header>
@@ -188,8 +183,7 @@
      <header class="container-group inner-element uib_w_11" data-uib="app_framework/header" data-ver="0" id="af-header-3">
       <h1>Item 3</h1>
       <div class="widget-container wrapping-col single-centered"></div>
-      <div class="widget-container content-area horiz-area wrapping-col left"><a class="button widget uib_w_22 d-margins icon left" data-uib="app_framework/button" data-ver="0" id="item3backbutton"
-       href="#mainpage">Back</a>
+      <div class="widget-container content-area horiz-area wrapping-col left with-back"><a class="button" id="backButton">Back</a>
       </div>
       <div class="widget-container content-area horiz-area wrapping-col right"></div>
      </header>
@@ -219,8 +213,7 @@
      <header class="container-group inner-element uib_w_10" data-uib="app_framework/header" data-ver="0" id="af-header-2">
       <h1>Item 2</h1>
       <div class="widget-container wrapping-col single-centered"></div>
-      <div class="widget-container content-area horiz-area wrapping-col left"><a class="button widget uib_w_23 d-margins icon left" data-uib="app_framework/button" data-ver="0" id="item2backbutton"
-       href="#mainpage">Back</a>
+      <div class="widget-container content-area horiz-area wrapping-col left with-back"><a class="button" id="backButton">Back</a>
       </div>
       <div class="widget-container content-area horiz-area wrapping-col right"></div>
      </header>
@@ -250,8 +243,7 @@
      <header class="container-group inner-element uib_w_9" data-uib="app_framework/header" data-ver="0" id="af-header-1">
       <h1>Item 1</h1>
       <div class="widget-container wrapping-col single-centered"></div>
-      <div class="widget-container content-area horiz-area wrapping-col left"><a class="button widget uib_w_25 d-margins icon left" data-uib="app_framework/button" data-ver="0" id="item1backbutton"
-       href="#mainpage">Back</a>
+      <div class="widget-container content-area horiz-area wrapping-col left with-back"><a class="button" id="backButton">Back</a>
       </div>
       <div class="widget-container content-area horiz-area wrapping-col right"></div>
      </header>
