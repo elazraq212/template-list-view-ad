@@ -162,12 +162,12 @@ body:not(#afui) .upage-outer {
 }
 /* sidebars and crossbars */
 .uib_sidebar {
-  position: absolute;
+  position: fixed;
   height: 100%;
   top: 0px;
 }
 .uib_crossbar {
-  position: absolute;
+  position: fixed;
   width: 100%;
   left: 0px;
 }
@@ -207,6 +207,8 @@ body:not(#afui) .upage-outer {
   z-index: 4;
 }
 .sidebar-content {
+  height: 100%;
+  overflow-y: auto;
   position: relative;
   margin: 0;
 }
@@ -215,7 +217,10 @@ body:not(#afui) .upage-outer {
   margin: 0;
   /* background-image:url('images/gripper.png'); */
 }
-#afui header {
+.template {
+  display: none !important;
+}
+#afui .header header {
   display: -webkit-flex !important;
   display: -moz-flex !important;
   display: -ms-flex !important;
@@ -227,12 +232,15 @@ body:not(#afui) .upage-outer {
   -o-align-items: center;
   align-items: center;
 }
-#afui header input {
+#afui .header header#defaultHeader {
+  display: none !important;
+}
+#afui .header header input {
   height: 32px;
   padding: 6px;
   font-size: 13px;
 }
-#afui header > .horiz-area {
+#afui .header header > .horiz-area {
   -webkit-flex: 1;
   -moz-flex: 1;
   -ms-flex: 1;
@@ -241,21 +249,27 @@ body:not(#afui) .upage-outer {
   pointer-events: none;
   z-index: 1;
 }
-#afui header > .horiz-area > * {
+#afui .header header > .horiz-area > * {
   pointer-events: auto;
 }
-#afui header > h1 {
+#afui .header header > h1 {
   text-align: center !important;
 }
-#afui header > .single-centered {
+#afui .header header > .single-centered {
   position: absolute;
   width: 100%;
   text-align: center;
 }
-#afui header > .single-centered > * {
+#afui .header header > .single-centered > * {
   z-index: 1;
   margin-left: auto !important;
   margin-right: auto !important;
+}
+#afui .header header > .content-area.left.with-back > :not(.backButton) {
+  display: none;
+}
+#afui .header header > .widget-container {
+  height: 100%;
 }
 .uib_row_1:not(.cright) > .col {
   padding-right: 20px;
@@ -276,7 +290,10 @@ body:not(#afui) .upage-outer {
   }
 }
 @media all {
-  
+  #afui .grid-pad {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 @media all and (min-width: 0px) {
   #afui .row-height-1 > .col > .content-area {
@@ -285,7 +302,6 @@ body:not(#afui) .upage-outer {
 }
 @media all {
   #afui .d-margins {
-    margin-top: 5px;
     margin-bottom: 6px;
   }
   #afui .wrapping-col > .d-margins {
